@@ -3,11 +3,11 @@ fetch("https://jsonplaceholder.typicode.com/todos")
 .then (data => createPost(data));
 
 
-function createPost(array) {
+function createPost(postarray) {
     let listElement = document. getElementById("list");
-    for(let i = 0; i < array. length; i++){
+    for(let i = 0; i < postarray. length; i++){
         let listItem = document .createElement("li");
-        listItem.innerHTML = array[i]["title"];
+        listItem.innerHTML = postarray[i]["title"];
         listElement.appendChild(listItem);
     }
 } 
